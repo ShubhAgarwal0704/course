@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Course Page</title>
+
+</head>
+
+<body>
+
+	<h1>Course Information as follows</h1>
+	<h2 th:text="${course.id}"></h2>
+	<h2 th:text="${course.name}"></h2>
+	<h2 th:text="${course.hod}"></h2>
+	<div th:object="${Course}">
+		<h1>The Value is accessed through selection tag</h1>
+		<span th:text="*{id}">Id</span>
+		<span th:text="*{name}">name</span>
+		<span th:text="*{hod}">contact</span>
+	</div>
+</body>
+
+</html>
